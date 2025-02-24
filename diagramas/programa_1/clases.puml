@@ -1,0 +1,17 @@
+@startuml
+
+package programa_1.aplicacion {
+    class Principal {
+        + main(String[] args): void
+    }
+}
+
+package programa_1.mates {
+    class Matematicas {
+        - Matematicas()
+        + generarNumeroPi(long pasos): double
+    }
+}
+
+Principal --> Matematicas : usa
+@enduml
