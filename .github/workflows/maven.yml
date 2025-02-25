@@ -24,10 +24,16 @@ jobs:
           cache: 'maven'
 
       - name: Compilar el proyecto
-        run: mvn compile
+        run: mvn clean compile
 
       - name: Generar Javadoc
         run: mvn javadoc:javadoc
+
+      - name: Forzar la creación de la carpeta Javadoc
+        run: mkdir -p target/site/apidocs/
+
+      - name: Listar archivos generados
+        run: ls -R target/site/apidocs/ || echo "La carpeta está vacía"
 
       - name: Subir Javadoc como artefacto
         uses: actions/upload-artifact@v4
