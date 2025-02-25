@@ -4,6 +4,12 @@ import java.util.Random;
 
 public class Matematicas {
 
+    /**
+     * Genera una aproximación al número pi mediante Montecarlo
+     * El parámetro ‘pasos‘ indica el número de puntos
+     * generado.
+     */
+
     private Matematicas() {}
 
     public static double generarNumeroPi(long pasos){
