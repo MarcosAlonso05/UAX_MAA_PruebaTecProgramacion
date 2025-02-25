@@ -29,6 +29,10 @@ jobs:
       - name: Generar Javadoc
         run: mvn javadoc:javadoc || echo "Error al generar Javadoc"
 
+      - name: Mostrar contenido de target/
+        run: ls -R target/ || echo "No se encontraron archivos en target/"
+
+
       - name: Mostrar contenido de target/site/
         run: ls -R target/site/ || echo "No se encontraron archivos en target/site/"
 
