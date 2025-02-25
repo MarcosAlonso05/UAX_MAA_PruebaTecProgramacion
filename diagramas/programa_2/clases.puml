@@ -1,0 +1,26 @@
+@startuml
+
+package programa_2.dominio {
+    class Tablero {
+        - static int DIMENSION
+        - int[][] estadoActual
+        - int[][] estadoSiguiente
+        + Tablero()
+        + void leerEstadoActual()
+        + void generarEstadoActualPorMontecarlo()
+        + void transitarEstadoSiguiente()
+        - void generarEstadoSiguiente()
+        - int contarVecinosVivos(int x, int y)
+        + String toString()
+    }
+}
+
+package programa_2.aplicacion {
+    class Principal {
+        + static void main(String[] args)
+    }
+}
+
+Principal --> Tablero : usa
+
+@enduml
