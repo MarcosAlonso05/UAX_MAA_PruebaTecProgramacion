@@ -7,7 +7,7 @@ public class Matematicas {
     /**
      * Genera una aproximación al número pi mediante Montecarlo
      * El parámetro ‘pasos‘ indica el número de puntos
-     * generado.
+     * generados.
      */
 
     private Matematicas() {}
