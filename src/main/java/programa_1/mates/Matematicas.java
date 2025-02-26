@@ -1,4 +1,4 @@
-package main.java.programa_1.mates;
+package programa_1.mates;
 
 import java.util.Random;
 

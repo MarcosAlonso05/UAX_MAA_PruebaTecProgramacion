@@ -25,27 +25,3 @@ jobs:
 
       - name: Compilar el proyecto
         run: mvn clean compile
-
-      - name: Generar Javadoc
-        run: mvn javadoc:javadoc || echo "Error al generar Javadoc"
-      
-      - name: Forzar la creación de la carpeta Javadoc
-        run: mkdir -p target/site/apidocs/
-
-      - name: Mover archivos de Javadoc a la ruta correcta
-        run: | 
-          mkdir -p target/site/apidocs/
-          cp -r target/apidocs/* target/site/apidocs/ || echo "No se copiaron archivos, puede estar vacío"
-
-
-      - name: Forzar la creación de la carpeta Javadoc
-        run: mkdir -p target/site/apidocs/
-
-      - name: Listar archivos generados
-        run: ls -R target/site/apidocs/ || echo "La carpeta está vacía"
-
-      - name: Subir Javadoc como artefacto
-        uses: actions/upload-artifact@v4
-        with:
-          name: javadoc
-          path: target/site/apidocs/

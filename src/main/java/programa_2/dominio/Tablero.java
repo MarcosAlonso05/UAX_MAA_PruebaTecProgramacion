@@ -1,4 +1,4 @@
-package main.java.programa_2.dominio;
+package programa_2.dominio;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

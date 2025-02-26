@@ -1,6 +1,6 @@
-package test.java.pr3;
+package pr3;
 
-import main.java.programa_3.grafo.Graph;
+import programa_3.grafo.Graph;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,6 +1,6 @@
-package main.java.programa_2.aplicacion;
+package programa_2.aplicacion;
 
-import main.java.programa_2.dominio.Tablero;
+import programa_2.dominio.Tablero;
 
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;

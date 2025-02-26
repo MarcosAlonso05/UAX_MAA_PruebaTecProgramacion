@@ -1,5 +1,3 @@
-package main.java;
-
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +16,8 @@ public class Main {
         System.out.println("UAX TECNICAS DE PROGRAMA");
 
         while (opcion != 0) {
+            System.out.println();
+
             menu();
             System.out.print("||Seleccione opcion ---> ");
             opcion = sc.nextInt();
@@ -31,7 +31,7 @@ public class Main {
                     System.out.print("Introduce el numero de puntos a generar: ---> ");
                     String valor1 = sc.nextLine();
                     String[] argumentos = {valor1};
-                    main.java.programa_1.aplicacion.Principal.main(argumentos);
+                    programa_1.aplicacion.Principal.main(argumentos);
 
                     break;
 
@@ -40,7 +40,7 @@ public class Main {
 
                     System.out.println("== Juego de la Vida ==");
 
-                    main.java.programa_2.aplicacion.Principal.main(new String[0]);
+                    programa_2.aplicacion.Principal.main(new String[0]);
 
                     break;
 
@@ -49,7 +49,7 @@ public class Main {
 
                     System.out.println("== Estructura de Datos de Grafo ==");
 
-                    main.java.programa_3.aplicacion.Principal.main(new String[0]);
+                    programa_3.aplicacion.Principal.main(new String[0]);
 
                     break;
 

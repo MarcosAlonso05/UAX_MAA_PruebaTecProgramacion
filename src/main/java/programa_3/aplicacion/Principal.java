@@ -1,6 +1,6 @@
-package main.java.programa_3.aplicacion;
+package programa_3.aplicacion;
 
-import main.java.programa_3.grafo.Graph;
+import programa_3.grafo.Graph;
 
 import java.util.List;
 import java.util.Scanner;

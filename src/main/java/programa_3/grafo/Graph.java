@@ -1,4 +1,4 @@
-package main.java.programa_3.grafo;
+package programa_3.grafo;
 
 import java.util.*;
 
