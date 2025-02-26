@@ -27,7 +27,7 @@ public class Tablero {
      ********************************************************/
 
     public void leerEstadoActual() {
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main.java.programa_2/dominio/matriz.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/programa_2/dominio/matriz.txt"))) {
             String linea;
             int fila = 0;
 
