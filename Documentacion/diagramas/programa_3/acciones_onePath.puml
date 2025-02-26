@@ -1,0 +1,47 @@
+@startuml
+start
+
+:Verificar si los vértices v1 y v2 existen en el grafo;
+if (¿v1 o v2 no existen?) then (Sí)
+    :Retornar null;
+    stop
+else (No)
+    :Crear un mapa "traza" para rastrear el camino;
+    :Crear una pila "abierta" para almacenar vértices por visitar;
+    :Agregar v1 a la pila "abierta";
+    :Marcar v1 en "traza" con valor null;
+
+    :Inicializar variable "encontrado" como false;
+
+    while (¿La pila "abierta" no está vacía y no se ha encontrado v2?)
+        :Extraer el último vértice "u" de la pila "abierta";
+
+        if (¿u es igual a v2?) then (Sí)
+            :Marcar "encontrado" como true;
+        else (No)
+            :Para cada vértice "s" adyacente a "u";
+            if (¿"s" no está en "traza"?) then (Sí)
+                :Agregar "s" a la pila "abierta";
+                :Marcar "s" en "traza" con valor "u";
+            else (No)
+                :Continuar con el siguiente vértice adyacente;
+            endif
+        endif
+    endwhile
+
+    if (¿"encontrado" es true?) then (Sí)
+        :Crear una lista "res" para almacenar el camino;
+        :Inicializar "u" como v2;
+        while (¿"u" no es null?)
+            :Agregar "u" a la lista "res";
+            :Actualizar "u" con el valor de "traza" para "u";
+        endwhile
+        :Invertir la lista "res";
+        :Retornar la lista "res";
+    else (No)
+        :Retornar null;
+    endif
+endif
+
+stop
+@enduml

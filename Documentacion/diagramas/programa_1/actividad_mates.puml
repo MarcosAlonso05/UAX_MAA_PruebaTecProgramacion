@@ -1,0 +1,15 @@
+@startuml
+start
+:Recibir 'pasos';
+:Inicializar 'aciertos' a 0;
+:Crear instancia de Random;
+repeat
+    :Generar x e y aleatorios;
+    if (x^2 + y^2 <= 1) then (Sí)
+        :Incrementar aciertos;
+    endif
+repeat while (i < pasos)
+:Calcular PI = 4.0 * aciertos / pasos;
+:Devolver PI;
+stop
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+start
+
+:Inicializar Tablero;
+
+if (¿Leer estado de archivo?) then (Sí)
+    :leerEstadoActual();
+else (No)
+    :generarEstadoActualPorMontecarlo();
+endif
+
+:Mostrar estado actual;
+
+repeat
+    :Esperar 1 segundo;
+    :transitarEstadoSiguiente();
+    :Mostrar estado actual;
+repeat while (Iteraciones restantes?)
+
+stop
+
+@enduml
