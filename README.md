@@ -1,7 +1,7 @@
 # UAX_MAA_PruebaTecProgramacion
 
 ## Descripción
-Este repositorio trata de tres programas creados como practicas de programacion.
+Este repositorio trata de tres programas creados como practicas de programación.
 A ellos se pueden acceder como usuario desde un Main principal que tiene acesso a cada uno.
 Ademas, en el repositorio se encuentra una carpeta con los diagramas con los que se planificaron cada programa
 A continuación se detallan las prácticas implementadas, su funcionamiento, y las notas para usuarios y desarrolladores.
@@ -38,7 +38,7 @@ Esta práctica implementa una estructura de datos de grafo y un algoritmo para e
 El programa principal (`Main`) proporciona un menú interactivo para ejecutar las tres prácticas implementadas. 
 A continuación se detalla cómo usarlo.
 
-### Ejecucion
+## Ejecucion
 1. Clona el repositorio.
 2. Navega a la carpeta del proyecto.
 3. Compila y ejecuta el programa principal
@@ -46,6 +46,24 @@ A continuación se detalla cómo usarlo.
 ## Requisitos
 - **Java JDK 8 o superior**: Asegúrate de tener instalado Java en tu sistema.
 - **Compilador de Java**: Para compilar y ejecutar el programa.
+
+## Analisis de Complejidad
+#### Programa 1:
+Complejidad temporal: O(n) (crece linealmente con 'pasos').
+Complejidad espacial: O(1) (uso constante de memoria).
+
+#### Programa 2:
+Complejidad temporal: O(n 2), porque las operaciones principales recorren una matriz de tamaño n×n.
+Complejidad espacial: O(n 2), por la matriz almacenada en Tablero.
+
+### Programa 3
+Complejidad temporal: O(V+E) (búsqueda en profundidad).
+Complejidad espacial: O(V) (almacenamiento de traza y pila).
+
+## Documentacion
+- Diagramas UML
+- Javadoc
+- Video Demostracion
 
 # LINK AL REPOSITORIO 
 https://github.com/MarcosAlonso05/UAX_MAA_PruebaTecProgramacion
