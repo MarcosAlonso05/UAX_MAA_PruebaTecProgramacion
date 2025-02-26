@@ -50,7 +50,5 @@ public class Principal {
                 System.out.println("No se encontró un camino.");
             }
         }
-
-        entrada.close();
     }
 }

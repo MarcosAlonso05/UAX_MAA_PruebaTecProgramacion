@@ -6,6 +6,10 @@ public class Graph<V>{
 
     private Map<V, Set<V>> adjacencyList = new HashMap<>();
 
+    /********************************************************
+     * Añade el vértice ‘v‘ al grafo.
+     ********************************************************/
+
     public boolean addVertex(V v){
         if(adjacencyList.containsKey(v)){
             return false;
@@ -13,6 +17,10 @@ public class Graph<V>{
         adjacencyList.put(v, new HashSet<>());
         return true;
     }
+
+    /********************************************************
+     * Añade un arco entre los vértices ‘v1‘ y ‘v2‘ al grafo.
+     ********************************************************/
 
     public boolean addEdge(V v1, V v2){
         addVertex(v1);
@@ -27,12 +35,20 @@ public class Graph<V>{
         return true;
     }
 
+    /********************************************************
+     * Obtiene el conjunto de vértices adyacentes a ‘v‘.
+     ********************************************************/
+
     public Set<V> obtainAdjacents(V v) throws Exception{
         if(!adjacencyList.containsKey(v)){
             throw new Exception("El vertice no existe");
         }
         return adjacencyList.get(v);
     }
+
+    /********************************************************
+     * Comprueba si el grafo contiene el vértice dado.
+     ********************************************************/
 
     public boolean containsVertex(V v){
         return adjacencyList.containsKey(v);
@@ -46,6 +62,11 @@ public class Graph<V>{
         }
         return sb.toString();
     }
+
+    /********************************************************
+     * Obtiene, en caso de que exista, un camino entre ‘v1‘ y
+     *  ‘v2‘. En caso contrario, devuelve ‘null‘.
+     ********************************************************/
 
     public List<V> onePath(V v1, V v2){
         if (!containsVertex(v1) || !containsVertex(v2)) {
