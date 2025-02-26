@@ -1,6 +1,6 @@
-package programa_2.aplicacion;
+package main.java.programa_2.aplicacion;
 
-import programa_2.dominio.Tablero;
+import main.java.programa_2.dominio.Tablero;
 
 import java.util.concurrent.TimeUnit;
 import java.lang.InterruptedException;
