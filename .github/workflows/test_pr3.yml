@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - programa3
+    paths:
+      - 'src/main/java/programa_3/grafo/Graph.java'
 
 jobs:
   build:
