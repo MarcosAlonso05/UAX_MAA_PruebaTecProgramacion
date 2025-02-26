@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - programa3
+      - develop
     paths:
       - 'src/main/java/programa_3/grafo/Graph.java'
 
