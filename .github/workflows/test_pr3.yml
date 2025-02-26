@@ -1,0 +1,35 @@
+name: Run Test for PR3
+
+on:
+  push:
+    branches:
+      - programa3
+      - develop
+    paths:
+      - 'src/main/java/programa_3/grafo/Graph.java'
+  pull_request:
+    branches:
+      - develop
+    paths:
+      - 'src/main/java/programa_3/grafo/Graph.java'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
+      - name: Run tests
+        run: mvn test
